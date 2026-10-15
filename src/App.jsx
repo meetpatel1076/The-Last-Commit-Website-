@@ -2,9 +2,9 @@ const LINKS = {
   vault: 'https://vault.thelastcommit.xyz/',
   vaultFeatures: 'https://vault.thelastcommit.xyz/features',
   // Replace these with the official live profile / invite URLs before launch.
-  discord: 'https://discord.com/',
-  instagram: 'https://instagram.com/',
-  github: 'https://github.com/',
+  discord: 'https://discord.gg/rtFWb6p9',
+  instagram: 'https://www.instagram.com/thelastcommit.tlc/#',
+  github: 'https://github.com/meetpatel1076/The-Last-Commit-Website-.git',
 };
 
 function ArrowUpRight({ size = 16 }) {
@@ -12,7 +12,16 @@ function ArrowUpRight({ size = 16 }) {
 }
 
 function Mark({ small = false }) {
-  return <span className={`brand-mark${small ? ' brand-mark--small' : ''}`} aria-hidden="true"><span /><span /><span /></span>;
+  return (
+    <img
+      className={`brand-mark${small ? ' brand-mark--small' : ''}`}
+      src="/tlc-logo.png"
+      alt=""
+      aria-hidden="true"
+      draggable="false"
+      style={{ borderRadius: '50%', height: 35, width: 35 }}
+    />
+  );
 }
 
 function ProjectCard({ number, name, label, description, features, href, action, className = '' }) {
